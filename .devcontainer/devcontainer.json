@@ -1,0 +1,25 @@
+{
+	"name": "Xbox Development",
+
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+
+	// Since codespace doesn't perform recursive checkout all submodules, we'll do that here.
+	"postCreateCommand": "git submodule update --init --recursive",
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	//"features": {
+	//	"ghcr.io/devcontainers/features/common-utils": {}
+	//},
+
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cpptools-extension-pack",
+				"ms-vscode.makefile-tools"
+			]
+		}
+	}
+}
